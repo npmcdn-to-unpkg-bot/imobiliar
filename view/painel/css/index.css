@@ -1,0 +1,101 @@
+body.fundo{
+
+/* Colores de Fundo em linear-gradiente feito na Extensão
+	Google Chorme ColorZilla Compativel com todos navegadores*/
+
+	background: -moz-linear-gradient(left,  rgba(183,222,237,1) 0%, rgba(189,118,224,1) 0%, rgba(192,133,221,1) 18%, rgba(189,118,224,1) 33%, rgba(176,84,221,1) 33%, rgba(189,118,224,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(183,222,237,1) 0%,rgba(189,118,224,1) 0%,rgba(192,133,221,1) 18%,rgba(189,118,224,1) 33%,rgba(176,84,221,1) 33%,rgba(189,118,224,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(183,222,237,1) 0%,rgba(189,118,224,1) 0%,rgba(192,133,221,1) 18%,rgba(189,118,224,1) 33%,rgba(176,84,221,1) 33%,rgba(189,118,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#bd76e0',GradientType=1 ); /* IE6-9 */
+
+}
+/* Bloco da Seção que Contem meu Logo , Titulo e Form de Autenticação */
+section{
+	position: absolute;
+	top: 30%;
+	left:30%;
+	margin-top: -50px;
+	margin-left: -50px;
+
+}
+/* Bloco do Logo e Titulo */
+.logo-tit{
+	float: left;
+
+}
+/* Propriedades dentro do Bloco de Logo */
+
+/* Define Logo */
+.logo{
+	border-radius: 100px;
+	width: 200px;
+	height: 200px;
+	background: white;
+}
+
+/* Define Titulo "IMOBILIAR" */
+.titulo {
+	color: white;
+	font-weight: bold;
+	font-size: 38px;
+}
+
+/*Define Version */
+
+.version{
+	color: white;
+	font-style: italic;
+	font-size: 20px;
+	text-align: center;
+}
+
+/* Bloco de Autenticação */
+.aut{
+	float: left;
+	width: 450px;
+	height: 150px;
+	display: block;
+	margin:25px 50px 0px 50px;
+}
+/* Propriedades do Bloco de Autenticação */
+
+/* Input Name e Senha */
+input[type=text],input[type=password]{
+	background: #A545D8; 
+	font-weight: bold;
+	width: 300px;
+	height: 50px;
+	margin-top:20px;
+	border: 0px solid ;
+	color: white;
+}
+
+/* Define Hover dos Input */
+input[type=text]:hover,input[type=password]:hover, textarea:hover{ 
+         background: #A545D8;
+         color:white;
+         font-weight: bold;
+     }
+
+/* Define de Butão */
+.aut button {
+	width: 100px;
+	height: 120px;
+	float: right;
+	margin-top: -120px;
+	margin-right: 30px;
+	}
+
+/* Define Esqueceu sua senha ? */
+.forget{
+	color:white;
+	float: left;
+}
+
+/*Define nova usuario */
+.new{
+	color: white;
+	float: left;
+	margin-left: 75px;
+}
+4
