@@ -2,10 +2,13 @@
 <head>
 	<title>Imobiliar</title>
 </head>
-     
+	<?php
+	$css = $data['baseDir'];
+	
+	 ?>
      <!-- Links de Ferramentas de Estilos -->
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/imobiliar/view/painel/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/imobiliar/view/painel/bootstrap/bootstrap.css">
 
 <body class="fundo">
 
@@ -13,7 +16,7 @@
 
 	<!--Bloco do Logo e Titulo -->
 	<div class="logo-tit">
-		<img class="logo"src="img-icon/logo.png">
+		<img class="logo" src="/imobiliar/view/painel/img-icon/logo.png">
 		<div class="titulo">IMOBILIAR</div>
 		<div class="version">versão - 0.10</div>
 	</div>
