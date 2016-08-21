@@ -2,10 +2,6 @@
 <head>
 	<title>Imobiliar</title>
 </head>
-	<?php
-	$css = $data['baseDir'];
-	
-	 ?>
      <!-- Links de Ferramentas de Estilos -->
 	<link rel="stylesheet" type="text/css" href="/imobiliar/view/painel/css/index.css">
 	<link rel="stylesheet" type="text/css" href="/imobiliar/view/painel/bootstrap/bootstrap.css">
@@ -23,10 +19,10 @@
 
 	<!--Bloco do Login e Senha -->
 	<div class="aut">
-		<form>
+		<form method="post" action="painel/home">
 		<input type="text" class="form-control" name="email" placeholder="EMAIL">
 		<input type="password" class="form-control" name="senha" placeholder="PASSWORD">
-		<button type="button" class="btn btn-warning btn-lg">OK</button>
+		<button type="submit" class="btn btn-warning btn-lg">OK</button>
 		</form>
 		<div class="forget"> Esqueceu sua senha ? </div>
 		<div class="new"> Nova Conta </div>
