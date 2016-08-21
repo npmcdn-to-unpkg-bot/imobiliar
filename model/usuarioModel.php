@@ -11,6 +11,9 @@ class usuarioModel extends Database{
 	private $telefone;
 	private $creci; 
 	private $ativo;
+	private $createAt;
+	private $updatedAt;
+
 
 	public function getIdUsuario(){
 		return $this->idUsuario;
@@ -39,7 +42,6 @@ class usuarioModel extends Database{
 	public function getSobrenome(){
 		return $this->sobrenome;
 	}
-
 	public function setSobrenome($sobrenome){
 		$this->sobrenome = $sobrenome;
 	}
@@ -55,23 +57,46 @@ class usuarioModel extends Database{
 	public function setAtivo($ativo){
 		$this->ativo = $ativo;
 	}
+	public function setCreatedAt(){
+		return $this->createdAt;
+	}
+	public function getCreatedAt($createdAt){
+		$this->createdAt = $createdAt;
+	}
 
-	public function check($array){
-		//Sql para checar o usuario
-		$sql = "SELECT * FROM usuario where email='".$array['email']."' and senha='".$array['senha']."'";
-		$response = Database::getInstance()->query($sql);
-		$response = $response->fetch(PDO::FETCH_ASSOC);
-		if(empty($response)){
+	/*
+	*	Metodo verifica se o usuario existe, se existir ele retorna o array contendo 
+	*	as informações que retornaram do banco, se não existir retorna false
+	*	@param array('email', 'senha');
+	*/
+	public function checkLogin($array){
+		$sql= "SELECT * FROM usuario WHERE email=:email AND senha=:senha";
+		$conn = self::getInstance()->prepare($sql);
+		$conn->bindValue(":email", $array['email']);
+		$conn->bindValue(":senha", $array['senha']);
+		$conn->execute();
+		$r = $conn->fetch(PDO::FETCH_OBJ);
+		//Se $r for vazio, logo, não há registros no banco então a informação não existe
+		if(empty($r)){
 			return false;
 		}else{
 			session_start();
-			$_SESSION['nome'] = $response['nome'];
-			$_SESSION['sobrenome'] = $response['sobrenome'];
-			$_SESSION['email'] = $response['email'];
-		
-			
-			return $response;
+			$_SESSION['nome'] = $r->nome;
+			$_SESSION['sobrenome'] = $r->sobrenome;
+			$_SESSION['email'] = $r->email;
+			return $r;
+		}
+	}
+	/*
+	*	Metodo para recuperação de Senha
+	*/
+	public function forgotPass($email){
+		//verifica se o email existe no banco
+		$data = $this->listAll("usuario");
+		while ($linha = $data->fetch(PDO::FETCH_OBJ)) {
+		    var_dump($linha->email);
 		}
 
 	}
+
 }

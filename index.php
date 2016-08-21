@@ -38,16 +38,26 @@ $app->group('/painel', function() use ($app) {
 	*
 	*/
 });	
-$app->get('/teste', function(){
-	$model = new \Model\Database();
-	$data = [
-	'email' => 'adnilton@linkfort.com.br',
-	'senha'	=>	'123',
-	'nome'	=>	'adnilton',
-	'sobrenome'	=>	'Silva',
+$app->get('/teste', function($request,$response){
+	/*$phpView = new PhpRenderer("view/painel/");
+	return $phpView->render($response,"teste.php");
+	*/
+	// O remetente deve ser um e-mail do seu domínio conforme determina a RFC 822.
+// O return-path deve ser ser o mesmo e-mail do remetente.
+$headers = "MIME-Version: 1.1\r\n";
+$headers .= "Content-type: text/plain; charset=UTF-8\r\n";
+$headers .= "From: guilhermebritto.prof@gmail.com\r\n"; // remetente
+$headers .= "Return-Path: eu@seudominio.com\r\n"; // return-path
+$envio = mail("guilherme.brito@linkfort.com.br", "Email teste", "BLA BLA", $headers);
+ 
+if($envio)
+ echo "Mensagem enviada com sucesso";
+else
+ echo "A mensagem não pode ser enviada";
+});
 
-	];
-
-	 $model->insert("usuario", $data);
+$app->post('/teste', function(){
+	$controller = new \Controller\UsuarioController();
+	$controller->forgotPassword($_POST);
 });
 $app->run();

@@ -38,9 +38,7 @@ class Database{
 		self::$util =  Utils::getInstance();
 		$array = self::$util->makeSql($dados);
 		$sql = "INSERT INTO ".$tabela." ".$array['key']." values ".$array['value']."";
-		$this->getInstance();
-		$stmt = self::$instance->query($sql);
-		
+		return $this->getInstance()->prepare($sql)->execute();
 	}
 	public function update(){
 
@@ -48,7 +46,13 @@ class Database{
 	public function delete(){
 
 	}
-	public function listAll(){
-
+	/*
+	*	Metodo para select no banco
+	*	@param $tabela é a tabela que será executado o select
+	*	@return retorna um array (PDOStatemente) com o retorno do banco
+	*/
+	public function listAll($tabela){
+		$sql = "SELECT * FROM ".$tabela."";
+		return $this->getInstance()->query($sql);
 	}
 }
