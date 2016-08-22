@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <html>
 <head>
 	<title>Imobiliar</title>
@@ -18,4 +19,6 @@
 
 
 
+=======
+>>>>>>> backEnd
 
