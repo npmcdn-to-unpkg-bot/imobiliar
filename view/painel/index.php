@@ -2,8 +2,6 @@
 <head>
 	<title>Imobiliar</title>
 </head>
-<<<<<<< HEAD
-
      <!-- Links de Ferramentas de Estilos  -->
     <link rel="stylesheet" type="text/css" href="/imobiliar/view/painel/css/index.css">
 	<link rel="stylesheet" type="text/css" href="/imobiliar/view/painel/frameworks/bootstrap/bootstrap.css">
@@ -20,13 +18,6 @@
 	});
 	</script>
 	
-=======
-     <!-- Links de Ferramentas de Estilos -->
-	<link rel="stylesheet" type="text/css" href="/imobiliar/view/painel/css/index.css">
-	<link rel="stylesheet" type="text/css" href="/imobiliar/view/painel/bootstrap/bootstrap.css">
->>>>>>> backEnd
-
-
 <body class="fundo"  ng-controller="appController">
 
 <section>
@@ -39,7 +30,6 @@
 	</div>
 
 	<!--Bloco do Login e Senha -->
-<<<<<<< HEAD
 	<div class="aut" ng-show="conta" >
 	
 		<form action="painel/home" method="post">
@@ -75,13 +65,6 @@
 				</td>
 			</tr>
 		
-=======
-	<div class="aut">
-		<form method="post" action="painel/home">
-		<input type="text" class="form-control" name="email" placeholder="EMAIL">
-		<input type="password" class="form-control" name="senha" placeholder="PASSWORD">
-		<button type="submit" class="btn btn-warning btn-lg">OK</button>
->>>>>>> backEnd
 		</form>
 			</table>
 	</div>
