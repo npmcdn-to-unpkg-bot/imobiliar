@@ -11,14 +11,13 @@ class UsuarioController{
 	*/
 	public function login($array){
 		$model = new \Model\usuarioModel();
-		$app = new Slim\Views\PhpRenderer;
 		$r = $model->checkLogin($array);
 		
 		if ($r == false){
 			echo "login incorreto";
 		}else{
 			
-			$this->$app->render('home.php');
+			return true;
 		}
 	}
 	/*
@@ -38,7 +37,7 @@ class UsuarioController{
 		$util = new Utils();
 		$util->changeIndex($array, "0", 'createdAt');
 		$model = new \Model\UsuarioModel();
-		return $model->insert("usuario",$array);
+		 return $model->insert("usuario",$array);
 
 	}
 }
