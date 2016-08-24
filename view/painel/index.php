@@ -17,9 +17,8 @@
 		$scope.senha = false;
 
 	});
-	</script>
 	
-
+	</script>
 
 <body class="fundo"  ng-controller="appController">
 
@@ -78,6 +77,18 @@
 		<table>	
 			
 			<form action="painel/newconta" method="post">
+
+			<tr>
+				<td>
+			<input type="text" class="form-control" name="Nome" placeholder="NOME">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+			<input type="text" class="form-control" name="email" placeholder="SOBRENOME">
+				</td>
+			</tr>
 			
 			<tr>
 				<td>
@@ -88,6 +99,12 @@
 			<tr>
 				<td>
 			<input type="password" class="form-control" name="senha" placeholder="SENHA">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+			<input type="password" class="form-control" name="senha" placeholder="REPETIR SENHA">
 				</td>
 			</tr>
 
