@@ -35,7 +35,8 @@ class UsuarioController{
 		$util = new Utils();
 		$util->changeIndex($array, "0", 'createdAt');
 		$model = new \Model\UsuarioModel();
-		return $model->insert("usuario",$array);
+		var_dump($array);
+		// return $model->insert("usuario",$array);
 
 	}
 }
