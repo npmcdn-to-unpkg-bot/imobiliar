@@ -4,7 +4,7 @@
 </head>
      <!-- Links de Ferramentas de Estilos  -->
     <link rel="stylesheet" type="text/css" href="/imobiliar/view/painel/css/index.css">
-	<link rel="stylesheet" type="text/css" href="/imobiliar/view/painel/frameworks/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/imobiliar/view/painel/frameworks/bootstrap/css/bootstrap.css">.
 	<script type="text/javascript" src="/imobiliar/view/painel/frameworks/angular/angular.js"></script>
 
 	<script type="text/javascript">
@@ -16,12 +16,7 @@
 		$scope.senha = false;
 
 	});
-	
-<<<<<<< HEAD
-=======
-	</script>
-
->>>>>>> front-end
+		</script>
 <body class="fundo"  ng-controller="appController">
 
 <section>
@@ -65,7 +60,7 @@
 
 			<tr>
 				<td>
-			<br><button type="submit" class="btn btn-danger form-control" ng-click="conta = true; senha = false">Voltar</button>
+			<br><button type="button" class="btn btn-danger form-control" ng-click="conta = true; senha = false">Voltar</button>
 				</td>
 			</tr>
 		
@@ -82,13 +77,13 @@
 
 			<tr>
 				<td>
-			<input type="text" class="form-control" name="Nome" placeholder="NOME">
+			<input type="text" class="form-control" name="nome" placeholder="NOME">
 				</td>
 			</tr>
 
 			<tr>
 				<td>
-			<input type="text" class="form-control" name="email" placeholder="SOBRENOME">
+			<input type="text" class="form-control" name="sobrenome" placeholder="SOBRENOME">
 				</td>
 			</tr>
 			
@@ -106,19 +101,13 @@
 
 			<tr>
 				<td>
-			<input type="password" class="form-control" name="senha" placeholder="REPETIR SENHA">
+			<input type="text" class="form-control" name="creci" placeholder="CRECI">
 				</td>
 			</tr>
 
 			<tr>
 				<td>
-			<input type="text" class="form-control" name="senha" placeholder="CRESCI">
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-			<input type="text" class="form-control phone-ddd-mask" name="senha" placeholder="TELEFONE" >
+			<input type="text" class="form-control" name="telefone" placeholder="TELEFONE" >
 				</td>
 			</tr>
 		

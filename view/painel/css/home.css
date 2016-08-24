@@ -1,6 +1,42 @@
+body{
+	margin:0;
+}
 #topo{
 	width: 100%;
 	height: 50px;
 	background: #B764DF;
 	box-shadow: 0px 3px 5px rgba(0,0,0,0.6);
-}	
+	padding: 2px 2px 0px 2px;
+
+}
+#fotoUser img{
+	width: 45px;
+	height: 45px;
+	float: left;
+	margin-left: 10px;
+}
+#user{
+	float: left;
+	color: white;
+	font-size: 18px;
+	padding:10px 0px 0px 10px;
+}
+#imovel a:link{
+	float: right;
+	border: 0px solid red;
+	margin-right: 10px;
+	height: 50px;
+	width: 60px;
+	margin-top: -2px;
+}
+
+#imovel a:hover{
+	opacity: 0.8;
+	background-color: #BE73E2;
+	}
+
+#imovel img{
+	height: 40px;
+	width: 40px;
+	margin: 5px 0px 2px 9px;
+}
