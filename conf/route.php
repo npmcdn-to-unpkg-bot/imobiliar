@@ -41,8 +41,7 @@ $app->group('/painel', function() use ($app) {
 			echo "deu bosta";
 		}
 	});
-
-	$app->get('/home', function() use ($app){
+	$app->get('/home',function($request, $response){
 		$phpView = new PhpRenderer("view/painel/");
 		return $phpView->render($response,"home.php");
 	});
@@ -51,7 +50,7 @@ $app->group('/painel', function() use ($app) {
 /*
 *	Rota criada para fins de teste do backend da aplicação
 */	
-$app->get('/teste', function($request,$response){
+$app->get('/teste', function($response, $request) use ($app){
 	$phpView = new PhpRenderer("view/painel/");
 	return $phpView->render($response,"teste.php");
 });
