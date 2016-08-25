@@ -41,6 +41,15 @@ $app->group('/painel', function() use ($app) {
 			echo "deu bosta";
 		}
 	});
+
+	$app->post('/home', function() use ($app){
+		$controller = new Controller\UsuarioController();
+		$r = $controller->login($_POST);
+		if ($r){
+			$phpView = new PhpRenderer("view/painel/");
+			return $phpView->render($response,"home.php");
+		}
+	});
 });
 
 /*
