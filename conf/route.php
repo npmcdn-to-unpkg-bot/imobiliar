@@ -24,15 +24,7 @@ $app->group('/painel', function() use ($app) {
 	/*
 	*	Rota para cadastro de novo usuario
 	*/
-	$app->post('/newconta', function() use ($app){
-		$controller = new Controller\UsuarioController();
-		$r = $controller->insertUser($_POST);
-		if ($r){
-			echo "cadastro efetuado com sucesso!";
-		}else{
-			echo "deu bosta";
-		}
-	});
+	$app->post('/usuario', new \Controller\UsuarioController());
 });
 
 /*
