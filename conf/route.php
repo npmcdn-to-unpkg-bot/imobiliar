@@ -42,13 +42,9 @@ $app->group('/painel', function() use ($app) {
 		}
 	});
 
-	$app->post('/home', function() use ($app){
-		$controller = new Controller\UsuarioController();
-		$r = $controller->login($_POST);
-		if ($r){
-			$phpView = new PhpRenderer("view/painel/");
-			return $phpView->render($response,"home.php");
-		}
+	$app->get('/home', function() use ($app){
+		$phpView = new PhpRenderer("view/painel/");
+		return $phpView->render($response,"home.php");
 	});
 });
 
