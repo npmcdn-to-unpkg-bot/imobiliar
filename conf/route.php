@@ -14,21 +14,13 @@ $app->group('/painel', function() use ($app) {
 		$phpView = new PhpRenderer("view/painel/");
 		return $phpView->render($response,"index.php");
 	});
-
 	/*
-	*	Recebe uma requisição $_POST para fazer login do usuario
+	*
 	*/
-	$app->post('', function($resquest,$response) use ($app){
-
-		$controller = new Controller\UsuarioController();
-		$r = $controller->login($_POST);
-		if ($r){
-			//renderiza
-			$phpView = new PhpRenderer("view/painel/");
-			return $phpView->render($response,"home.php");
-		}
+	$app->post('/home', function($request,$response) use ($app){
+		$phpView = new PhpRenderer("view/painel/");
+		return $phpView->render($response,"home.php");
 	});
-
 	/*
 	*	Rota para cadastro de novo usuario
 	*/
@@ -40,10 +32,6 @@ $app->group('/painel', function() use ($app) {
 		}else{
 			echo "deu bosta";
 		}
-	});
-	$app->get('/home',function($request, $response){
-		$phpView = new PhpRenderer("view/painel/");
-		return $phpView->render($response,"home.php");
 	});
 });
 

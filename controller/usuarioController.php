@@ -1,21 +1,24 @@
 <?php
 namespace Controller;
+use Slim\Views\PhpRenderer;
 use \Model\Utils;
 
 class UsuarioController{
 	public $model;
+	public $app;
 	/*
 	*	Metodo para login
 	*/
 	public function login($array){
 		$model = new \Model\usuarioModel();
+		$app = new Slim\Views\PhpRenderer;
 		$r = $model->checkLogin($array);
 		
 		if ($r == false){
 			echo "login incorreto";
 		}else{
 			
-			return true;
+			$this->$app->render('home.php');
 		}
 	}
 	/*
