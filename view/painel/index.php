@@ -112,7 +112,7 @@
 			</tr>
 		
 			<tr>
-				<td>
+					<td>
 			</br><button type="submit" class="form-control btn btn-primary">Registrar</button>
 				</td>
 			</tr>

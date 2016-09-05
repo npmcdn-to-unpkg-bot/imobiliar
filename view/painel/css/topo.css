@@ -46,25 +46,4 @@ body{
 	margin-right: 15px;
 }
 
-/* Bloco Centralizado e Formatado para receber todos os Formulários */
-.blocoForm{
-	width: 800px;
-	height: auto;
-	margin-top: 50px;
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-}
-.jumbotron{
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 50px;
-}
-.jumbotron h3{
-	margin-top: -20px;
-	margin-bottom: 20px;
-}
-.form-control{
-	margin-bottom: 10px;
-}
+
